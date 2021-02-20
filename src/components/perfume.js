@@ -21,11 +21,11 @@ class Perfume{
     if (this.reviews !=0){
         this.renderPerfumeReviews()
     }
-    else{
+    else {
       // manipulate div
       perfumeDiv.innnerHTML = `
-      <h3> class="card-title"> Name: ${this.name}</h3>
-      <h5> class="card-content"> Brand: ${this.brand}</h5> 
+      <h3> class="card-title"> Name: <br> ${this.name}</h3>
+      <h5> class="card-content"> Brand: <br> ${this.brand}</h5> 
     `
       // insert div 
       perfumeDiv.setAttribute('data.id', `${this.id}`)
@@ -33,6 +33,25 @@ class Perfume{
       perfumes.appendChild(perfumeDiv)
 
     }
+
+    renderPerfumeReviews(){
+        this.reviews.forEach(review => {
+
+
+        //create div
+        const reviews = document.querySelector('#reviews');
+        const perfumeDiv = document.createElement('div');
+
+        //manipulate div
+
+        // perfumeDiv.innerHTML = `
+        // <h3>
+        
+        // `
+
+        })
+    }
+
   
    }
 }

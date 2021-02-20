@@ -10,4 +10,15 @@ class Perfume{
 
        Perfume.allPerfume.push(this)
    }
+
+   renderPerfume(){
+       
+   }
+
+
+
+
+
+
+
 }

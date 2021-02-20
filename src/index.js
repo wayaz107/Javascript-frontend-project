@@ -13,6 +13,7 @@ function getPerfumes(){
     .then(perfumes =>{
       perfumes.forEach(perfume => {
           let newPerfume = new Perfume(perfume)
+          newPerfume.renderPerfume()
       })
     })
     .catch(err => alert(err.message))

@@ -10,7 +10,11 @@ const ALLREVIEWS_URL = `${BACKEND_URL}/reviews`;
 function getPerfumes(){
     fetch(ALLPERFUMES_URL)
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(perfumes =>{
+      perfumes.forEach(perfume => {
+          let newPerfume = new Perfume(perfume)
+      })
+    })
 }
 
 getPerfumes()

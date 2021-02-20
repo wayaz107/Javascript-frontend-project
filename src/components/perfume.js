@@ -1,4 +1,4 @@
-class Perfume{
+class Perfume {
    static allPerfume = [];
 
    constructor({id, name, brand, reviews = []}){
@@ -34,7 +34,7 @@ class Perfume{
 
     }
 
-    renderPerfumeReviews(){
+    renderPerfumeReviews() {
         this.reviews.forEach(review => {
 
 
@@ -44,10 +44,17 @@ class Perfume{
 
         //manipulate div
 
-        // perfumeDiv.innerHTML = `
-        // <h3>
+        perfumeDiv.innerHTML = `
+        <h3> class= "card-title"> Name: <br><br> ${this.name}</h3>
+        <br>
+        <h5> Reviews: </h5>
+        <br>
+        <ul>
+        <li class= "card-content" data.review.id="${review['id']}">${review['body']}</li>
+        </ul>
+        `
+        //insert div
         
-        // `
 
         })
     }

@@ -15,6 +15,7 @@ function getPerfumes(){
           let newPerfume = new Perfume(perfume)
       })
     })
+    .catch(err => alert(err.message))
 }
 
 getPerfumes()

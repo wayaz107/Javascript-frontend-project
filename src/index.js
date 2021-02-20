@@ -7,15 +7,18 @@ getPerfumes(e)
 });
 
 // load perfumes 
-function getPerfumes(e){
+function getPerfumes(e) {
     e.preventDefault()
     fetch(ALLPERFUMES_URL)
     .then(response => response.json())
-    .then(perfumes =>{
-      perfumes.forEach(perfume => {
-          let newPerfume = new Perfume(perfume)
-          newPerfume.renderPerfume()
-      })
+    .then(perfumes=> {
+        if(perfumes.message) {
+            alert(perfumes.message)
+        } else
+        perfumes.forEach(perfume => {
+            let newPerfume= new Perfume(perfume)
+            newPerfume.renderPerfume()
+        })
     })
     .catch(err => alert(err.message))
 }

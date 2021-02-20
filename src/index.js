@@ -2,12 +2,13 @@ const BACKEND_URL = 'http://localhost:3000/api/v1';
 const ALLPERFUMES_URL = `${BACKEND_URL}/perfumes`;
 const ALLREVIEWS_URL = `${BACKEND_URL}/reviews`;
 
-// document.addEventListener('DOMContentLoaded', function(e){
-
-// })
+document.addEventListener('DOMContentLoaded', function(e){
+getPerfumes(e)
+});
 
 // load perfumes 
-function getPerfumes(){
+function getPerfumes(e){
+    e.preventDefault()
     fetch(ALLPERFUMES_URL)
     .then(response => response.json())
     .then(perfumes =>{
@@ -19,4 +20,4 @@ function getPerfumes(){
     .catch(err => alert(err.message))
 }
 
-getPerfumes()
+// getPerfumes()

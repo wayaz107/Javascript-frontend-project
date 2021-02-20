@@ -1,11 +1,11 @@
 class Perfume {
    static allPerfume = [];
 
-   constructor({id, name, brand, reviews = []}){
+   constructor({id, name, brand, image, reviews = []}){
        this.id = id
        this.name = name
        this.brand = brand
-    //    this.image = image
+       this.image = image
        this.reviews = reviews
 
        Perfume.allPerfume.push(this)
@@ -23,18 +23,21 @@ class Perfume {
     }
     else {
       // manipulate div
-      perfumeDiv.innnerHTML = `
-      <h3> class="card-title"> Name: <br> ${this.name}</h3>
-      <h5> class="card-content"> Brand: <br> ${this.brand}</h5> 
+      perfumeDiv.innerHTML = `
+      <h3class="card-title"> Name: <br> ${this.name}</h3>
+      <h5class="card-content"> Brand: <br> ${this.brand}</h5> 
+      <img src='${this.image}' />
     `
       // insert div 
       perfumeDiv.setAttribute('data.id', `${this.id}`)
       perfumeDiv.className = 'card col s6'
       perfumes.appendChild(perfumeDiv)
 
+       }
     }
 
-    renderPerfumeReviews() {
+     renderPerfumeReviews() {
+
         this.reviews.forEach(review => {
 
 
@@ -45,7 +48,8 @@ class Perfume {
         //manipulate div
 
         perfumeDiv.innerHTML = `
-        <h3> class= "card-title"> Name: <br><br> ${this.name}</h3>
+        <h3 class= "card-title"> Name: <br><br> ${this.name}</h3>
+        <img src='${this.image}' />
         <br>
         <h5> Reviews: </h5>
         <br>
@@ -54,11 +58,12 @@ class Perfume {
         </ul>
         `
         //insert div
-        
+        perfumeDiv.setAttribute('data.id', `${this.id}`)
+            perfumeDiv.className = 'card'
+            reviews.appendChild(perfumeDiv)
 
-        })
+        });
     }
 
   
    }
-}

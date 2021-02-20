@@ -12,7 +12,12 @@ class Perfume{
    }
 
    renderPerfume(){
-       
+       const perfumes = document.querySelector('#perfumes');
+
+    //    create div
+       const perfumeDiv = document.createElement('div');
+
+
    }
 
 

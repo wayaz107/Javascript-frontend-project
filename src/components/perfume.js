@@ -24,8 +24,8 @@ class Perfume {
     else {
       // manipulate div
       perfumeDiv.innerHTML = `
-      <h3class="card-title"> Name: <br> ${this.name}</h3>
-      <h5class="card-content"> Brand: <br> ${this.brand}</h5> 
+      <h3class="card-title"> Name:${this.name}</h3><br>
+      <h5class="card-content"> Brand:${this.brand}</h5> 
       <img src='${this.image}' />
     `
       // insert div 

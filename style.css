@@ -1,2 +1,13 @@
 
+  .card {
+    text-align: center;
+    border: grey solid 1px;
+    border-radius: 3px;
+    padding: 4rem;
+    width: 23rem;
+    height: 24rem;
+    display: inline-grid;
+    margin: 3rem 4rem;
+  }
+
   

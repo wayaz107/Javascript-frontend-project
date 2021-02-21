@@ -26,7 +26,7 @@ class Perfume {
       perfumeDiv.innerHTML = `
       <h3class="card-title"> Name:${this.name}</h3><br>
       <h5class="card-content"> Brand:${this.brand}</h5> 
-      <img src='${this.image}' />
+      <img class="card-img-top" src='${this.image}' />
     `
       // insert div 
       perfumeDiv.setAttribute('data.id', `${this.id}`)
@@ -52,7 +52,6 @@ class Perfume {
         <img src='${this.image}' />
         <br>
         <h5> Reviews: </h5>
-        <br>
         <ul>
         <li class= "card-content" data.review.id="${review['id']}">${review['body']}</li>
         </ul>

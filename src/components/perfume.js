@@ -36,6 +36,8 @@ class Perfume {
       //add button
       const button = document.createElement('button')
       button.setAttribute('id', this.id)
+      button.innerText = 'Add Review'
+      perfumeDiv.appendChild(button)
   
        }
     }

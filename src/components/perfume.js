@@ -58,9 +58,8 @@ class Perfume {
         //manipulate div
 
         perfumeDiv.innerHTML = `
-        <h3 class= "card-title"> Name: <br><br> ${this.name}</h3>
         <img src='${this.image}' />
-        <br>
+        <h3 class= "card-title"> Name: <br><br> ${this.name}</h3>
         <h5> Reviews: </h5>
         <ul>
         <li class= "card-content" data.review.id="${review['id']}">${review['body']}</li>
@@ -75,8 +74,8 @@ class Perfume {
         const button = document.createElement('button')
         button.setAttribute("id", review['id'])
         button.innerText = 'Delete Review'
+        button.addEventListener('click', (e) => removeReview(e))
         perfumeDiv.appendChild(button)
-
         });
     }
 

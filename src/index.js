@@ -34,7 +34,7 @@ function removeReview(e){
         }
     })
     .then(response => {
-           console.log(response)
+        location.reload()
     })
-
+    .catch(err => alert("Please try again"))
 }

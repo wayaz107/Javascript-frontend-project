@@ -33,6 +33,10 @@ class Perfume {
       perfumeDiv.className = 'card col s6'
       perfumes.appendChild(perfumeDiv)
 
+      //add button
+      const button = document.createElement('button')
+      button.setAttribute('id', this.id)
+  
        }
     }
 

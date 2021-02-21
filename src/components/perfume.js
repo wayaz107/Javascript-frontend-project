@@ -71,6 +71,12 @@ class Perfume {
             perfumeDiv.className = 'card'
             reviews.appendChild(perfumeDiv)
 
+        //remove button
+        const button = document.createElement('button')
+        button.setAttribute("id", review['id'])
+        button.innerText = 'Delete Review'
+        perfumeDiv.appendChild(button)
+
         });
     }
 

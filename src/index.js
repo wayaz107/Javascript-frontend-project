@@ -23,4 +23,18 @@ function getPerfumes(e) {
     .catch(err => alert(err.message))
 }
 
-// getPerfumes()
+function removeReview(e){
+    e.preventDefault()
+    let id = e.target.id
+    fetch(`${ALLREVIEWS_URL}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        }
+    })
+    .then(response => {
+           console.log(response)
+    })
+
+}

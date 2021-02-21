@@ -24,8 +24,8 @@ class Perfume {
     else {
       // manipulate div
       perfumeDiv.innerHTML = `
-      <h3class="card-title"> Name:${this.name}</h3><br>
-      <h5class="card-content"> Brand:${this.brand}</h5> 
+      <h3class="card-title"> Name: ${this.name}</h3><br>
+      <h5class="card-content"> Brand: ${this.brand}</h5> 
       <img class="card-img-top" src='${this.image}' />
     `
       // insert div 
@@ -37,6 +37,10 @@ class Perfume {
       const button = document.createElement('button')
       button.setAttribute('id', this.id)
       button.innerText = 'Add Review'
+      // button.addEventListener('click', (e) => {
+       
+
+      // })
       perfumeDiv.appendChild(button)
   
        }

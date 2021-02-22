@@ -47,7 +47,7 @@ class Perfume {
     }
   }
 
-  renderPerfumeReviews(){
+  renderPerfumeReviews() {
 
         this.reviews.forEach(review => {
 
@@ -78,9 +78,11 @@ class Perfume {
         button.addEventListener('click', (e) => removeReview(e))
         perfumeDiv.appendChild(button)
         });
-  }
+  
+      }
 
-  reviewForm(){
+
+  reviewForm() {
     const form = document.createElement('form')
     form.setAttribute('class', 'addReview')
     form.setAttribute('id',this.id)
@@ -97,6 +99,12 @@ class Perfume {
     formButton.value = 'Submit Review'
     formButton.setAttribute('id', this.id)
     formButton.setAttribute('name', 'revSubmitBtn')
+
+    form.append(label)
+    form.append(textArea)
+    form.append(formButton)
+
+    return form
   }
 
 }

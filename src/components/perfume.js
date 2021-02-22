@@ -83,6 +83,7 @@ class Perfume {
   reviewForm(){
     const form = document.createElement('form')
     form.setAttribute('class', 'addReview')
+    form.setAttribute('id',this.id)
     
 
   }

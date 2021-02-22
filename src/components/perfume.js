@@ -91,6 +91,12 @@ class Perfume {
     textArea.name = 'reviewBody'
     textArea.value = ''
     textArea.id = 'reviewBody'
+
+    const formButton = document.createElement('input')
+    formButton.type = 'submit'
+    formButton.value = 'Submit Review'
+    formButton.setAttribute('id', this.id)
+    formButton.setAttribute('name', 'revSubmitBtn')
   }
 
 }

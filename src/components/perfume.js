@@ -42,6 +42,10 @@ class Perfume {
         const span = document.createElement('span')
         const form = this.reviewForm()
         span.appendChild(form)
+        perfumeDiv.appendChild(span)
+        button.remove()
+
+        
       })
       
        

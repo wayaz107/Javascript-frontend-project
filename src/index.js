@@ -26,24 +26,26 @@ function getPerfumes(e) {
 function removeReview(e){
     e.preventDefault()
     let id = e.target.id
-    fetch(`${ALLREVIEWS_URL}/${id}`, {
+    const response = fetch(`${ALLREVIEWS_URL}/${id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
-        }
+        },
     })
     .then(response => {
          location.reload()
-     })
+        })
+        .catch(err => alert("Please try again"))
+ }
+   
     
+     //removes perfume 
     // e.target.parentElement.remove() 
+
+    //removes the reviews but delete button still there
     // let el = document.getElementById(`review-${id}`)
     // el.remove()
     // console.log("removed!")
 
-    // .then(response => {
-    //     location.reload()
-    // })
-    // .catch(err => alert("Please try again"))
-}
+  

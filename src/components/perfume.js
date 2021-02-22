@@ -40,7 +40,8 @@ class Perfume {
       button.addEventListener('click', (e) =>{
         //new review
         const span = document.createElement('span')
-        
+        const form = this.reviewForm()
+        span.appendChild(form)
       })
       
        

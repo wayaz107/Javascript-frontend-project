@@ -17,7 +17,7 @@ function getPerfumes(e) {
         } else
         perfumes.forEach(perfume => {
             let newPerfume= new Perfume(perfume)
-            newPerfume.renderPerfume()
+            newPerfume.renderPerfume() 
         })
     })
     .catch(err => alert(err.message))
@@ -34,7 +34,16 @@ function removeReview(e){
         }
     })
     .then(response => {
-        location.reload()
-    })
-    .catch(err => alert("Please try again"))
+         location.reload()
+     })
+    
+    // e.target.parentElement.remove() 
+    // let el = document.getElementById(`review-${id}`)
+    // el.remove()
+    // console.log("removed!")
+
+    // .then(response => {
+    //     location.reload()
+    // })
+    // .catch(err => alert("Please try again"))
 }

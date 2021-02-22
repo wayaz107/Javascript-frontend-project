@@ -38,7 +38,8 @@ class Perfume {
       button.setAttribute('id', this.id)
       button.innerText = 'Add Review'
       // button.addEventListener('click', (e) => {
-       
+      //  //new review
+
 
       // })
       perfumeDiv.appendChild(button)
@@ -57,11 +58,12 @@ class Perfume {
 
         //manipulate div
 
-        perfumeDiv.innerHTML = `
+        perfumeDiv.innerHTML += `
         <img src='${this.image}' />
         <h3 class= "card-title"> Name: <br><br> ${this.name}</h3>
-        <h5> Reviews: </h5>
-        <ul>
+        <br>
+        <h5> Review: </h5>
+        <ul id= "review-${review.id}">
         <li class= "card-content" data.review.id="${review['id']}">${review['body']}</li>
         </ul>
         `
@@ -74,8 +76,8 @@ class Perfume {
         const button = document.createElement('button')
         button.setAttribute("id", review['id'])
         button.innerText = 'Delete Review'
-        button.addEventListener('click', (e) => removeReview(e))
         perfumeDiv.appendChild(button)
+        button.addEventListener('click', (e) => removeReview(e))
         });
     }
 

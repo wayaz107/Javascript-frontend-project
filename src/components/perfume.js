@@ -40,6 +40,7 @@ class Perfume {
       button.addEventListener('click', (e) =>{
         //new review
         const span = document.createElement('span')
+        
       })
       
        
@@ -76,7 +77,14 @@ class Perfume {
         button.innerText = 'Delete Review'
         button.addEventListener('click', (e) => removeReview(e))
         perfumeDiv.appendChild(button)
-        })
+        });
+  }
+
+  reviewForm(){
+    const form = document.createElement('form')
+    form.setAttribute('class', 'addReview')
+    
+
   }
 
 }

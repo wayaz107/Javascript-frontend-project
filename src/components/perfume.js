@@ -87,7 +87,10 @@ class Perfume {
     const label = document.createElement('label')
     label.innerText = "Add New Review"
 
-
+    const textArea = document.createElement('textarea')
+    textArea.name = 'reviewBody'
+    textArea.value = ''
+    textArea.id = 'reviewBody'
   }
 
 }

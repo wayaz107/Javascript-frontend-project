@@ -45,10 +45,11 @@ class Perfume {
         perfumeDiv.appendChild(span)
         button.remove()
 
-        
+
+      const reviewForm = document.querySelector('.addReview');
+      reviewForm.addEventListener("submit", e => reviewHandler(e))
       })
-      
-       
+      bookDiv.appendChild(button)
     }
   }
 

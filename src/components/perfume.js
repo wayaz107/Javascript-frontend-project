@@ -84,7 +84,9 @@ class Perfume {
     const form = document.createElement('form')
     form.setAttribute('class', 'addReview')
     form.setAttribute('id',this.id)
-    
+    const label = document.createElement('label')
+    label.innerText = "Add New Review"
+
 
   }
 

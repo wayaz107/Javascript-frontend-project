@@ -9,21 +9,26 @@ class Season {
    addListenerToSeason(){
        const seasonNames = document.querySelectorAll(".season-name")
        seasonNames.forEach(season => {
-           season.addEventListener("click", () => {
+           season.addEventListener("click", (e) => {
+               e.preventDefault();
               const container = document.querySelector(".container")
               container.style.display = "flex"
             switch(season.textContent) {
                  case "Summer":
-                     this.renderSummerLists()
-                     break
+                    this.clearPage()
+                    this.renderSummerLists()
+                    break
                   case "Winter":
-                      this.renderWinterLists()
+                    this.clearPage()
+                    this.renderWinterLists()
                       break
                   case "Fall":
-                      this.renderFallLists()
+                    this.clearPage()
+                    this.renderFallLists()
                       break
                    default:
-                     this.renderAllLists()
+                    this.clearPage()
+                    this.renderAllLists()
                     
               }
            })
@@ -31,6 +36,13 @@ class Season {
 
     }
 
+    clearPage(){
+        const clearLists = document.querySelectorAll(".list-card")
+        Array.from(clearLists).forEach(list => {
+            list.remove()
+        })
+
+    }
 
 
     renderSummerLists(){

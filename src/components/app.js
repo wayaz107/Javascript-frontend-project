@@ -5,5 +5,6 @@ class App {
     start() {
         const season = new Season()
         season.renderAllLists()
+        season.addListenerToSeason()
     }
 }

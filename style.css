@@ -54,7 +54,7 @@ h1 {
 ul#season{
     list-style-type: none;
     display: flex;
-    align-items: center;
+    align-lists: center;
     justify-content: space-evenly;
     border: 1px solid red;
     height: 100%;

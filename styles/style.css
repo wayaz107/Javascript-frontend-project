@@ -1,21 +1,25 @@
+​
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    background-color: #cf7e7e;
+    background-color: #FFE4C4;
     color: #9C5F5F;
     line-height: 18px;
 }
 
 h1 {
     text-align: center;
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+
 }
 
 .container {
-    display: none;
+    display: flex;
     flex-direction: row;
     text-align: center;
     background-color: white;
@@ -28,56 +32,41 @@ h1 {
     width: 85%;
     align-content: space-around;
     flex-wrap: wrap;
-
+    border-radius: 10px;
+    max-width: 100%;
 }
 
-/* .season-card {
-
-    text-align: center;
-    color: #9C5F5F;
-    border-color: #663939;
-    border-style: double;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 20px;
-    margin: auto;
-} */
-
-.list-card {
-    text-align: center;
-    color: #9C5F5F;
-    border-color: #663939;
-    border-style: double;
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    margin: auto;
-    /* height: 100px;
-    width: 100px; */
-}
-
-ul#season{
+ul#season {
     list-style-type: none;
     display: flex;
-    align-lists: center;
+    align-items: center;
     justify-content: space-evenly;
-    border: 1px solid red;
+    border: 1px solid rgb(112, 50, 50);
     height: 100%;
+
 }
 
 .season-nav {
-    border: 5px solid red;
+    border: 5px solid rgb(112, 50, 50);
+    border-radius: 10px;
     background-color: white;
     height: 10vh;
+    position: sticky;
+    top: 0;
+
 }
 
 .season-name {
     font-size: 20px;
-    border: 1px solid red;
-    height: 100%;
+    border: 1px solid rgb(92, 19, 19);
+    border-radius: 10px;
+    background-color: rgb(255, 165, 0);
     cursor: pointer;
-} 	} 
+    font-family: 'Raleway', sans-serif;
+    padding: 20px;
+}
 
+/* Item card */
 .list-card {
     width: 300px;
     color: #9C5F5F;
@@ -90,12 +79,39 @@ ul#season{
 
 }
 
-.name{
+/* div.list-image {
+    width: 250px;
+} */
+
+/* .list-image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #663939;
+} */
+
+.list-name{
     display: flex;
     justify-content: space-between;
     padding-top: 15px;
 }
 
-.list-desc {
+.list-description {
     padding-top: 15px;
+    text-align: left;
 }
+
+/* #create-season-item-form {
+    display: none;
+
+} */
+/* 
+.delete-item {
+    position: relative;
+    top: 10px;
+    right: 75px;
+    border-radius: 10px;
+}
+
+#submit-form {
+    border-radius: 10px;
+} */

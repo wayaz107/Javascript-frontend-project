@@ -5,6 +5,20 @@ class Season {
         this.listsAdapter = new ListsAdapter()
     }
 
+    renderSummerLists(){
+        this.seasonsAdapter.getSeasons().then(seasons => {
+            seasons[0].attributes.lists.forEach(list =>{
+                const summerList = new List(list.name, list.description, list.id, list.season_id)
+                summerList.createListCard()
+            })
+        })
+    }
+
+
+
+
+
+
     renderAllLists(){
         
         this.listsAdapter.getLists().then(lists => {
@@ -20,5 +34,5 @@ class Season {
 
 
 
-    
+
 }

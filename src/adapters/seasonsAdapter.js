@@ -7,7 +7,6 @@ class SeasonsAdapter{
     //     this.baseURL = baseURL
     //   }
 
-
     getSeasons() {
         return fetch(this.baseURL)
         .then(resp => resp.json())

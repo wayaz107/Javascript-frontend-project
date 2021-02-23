@@ -1,8 +1,8 @@
 //starts the application
 
-class App{
+class App {
   
-    start(){
+    start() {
         const season = new Season()
         season.renderAllLists()
     }

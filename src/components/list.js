@@ -10,7 +10,7 @@ class List {
 
  //dom elements
 
- createListCard(){
+   createListCard(){
      const container = document.querySelector(".container")
      
      const listCard = document.createElement("div")

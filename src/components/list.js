@@ -8,7 +8,18 @@ class List {
         this.listsAdapter = new ListsAdapter()
     }
 
- 
+ //dom elements
+
+ createListCard(){
+     const container = document.querySelector(".container")
+     const listCard = document.createElement("div")
+     listCard.className = "list-card"
+     listCard.setAttribute("data-id", `${this.id}`)
+     listCard.setAttribute("data-menu-id", `${this.season_id}`)
+
+     
+
+ }
 
 
 

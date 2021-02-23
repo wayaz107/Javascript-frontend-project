@@ -12,12 +12,23 @@ class List {
 
  createListCard(){
      const container = document.querySelector(".container")
+     
      const listCard = document.createElement("div")
      listCard.className = "list-card"
      listCard.setAttribute("data-id", `${this.id}`)
-     listCard.setAttribute("data-menu-id", `${this.season_id}`)
+     listCard.setAttribute("data-season-id", `${this.season_id}`)
 
+     const listName = document.createElement("div")
+     listName.className = "list-name"
+     listName.textContent = this.name
+
+     const listDesc = document.createElement("div")
+     listDesc.className = "list-description"
+     listDesc.textContent = this.description
+
+     listCard.append(listName, listDesc)
      
+     container.append(listCard)
 
  }
 

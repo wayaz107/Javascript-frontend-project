@@ -15,6 +15,18 @@ class Season {
     }
 
 
+   
+   renderWinterLists(){
+      this.seasonsAdapter.getSeasons().then(seasons => {
+          seasons[1].attributes.lists.forEach(list =>{
+            const winterList = new List(list.name, list.description, list.id, list.season_id)
+            winterList.createListCard()
+          })
+       })
+    }
+
+    
+
 
 
 

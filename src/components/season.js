@@ -25,7 +25,15 @@ class Season {
        })
     }
 
-    
+    renderFallLists(){
+        this.seasonsAdapter.getSeasons().then(seasons => {
+            seasons[2].attributes.lists.forEach(list =>{
+              const fallList = new List(list.name, list.description, list.id, list.season_id)
+              fallList.createListCard()
+            })
+         })
+      }
+  
 
 
 

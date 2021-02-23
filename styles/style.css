@@ -1,4 +1,9 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 body {
     background-color: #cf7e7e;
     color: #9C5F5F;
@@ -10,7 +15,7 @@ h1 {
 }
 
 .container {
-    display: flex;
+    display: none;
     flex-direction: row;
     text-align: center;
     background-color: white;
@@ -26,7 +31,7 @@ h1 {
 
 }
 
-.season-card {
+/* .season-card {
 
     text-align: center;
     color: #9C5F5F;
@@ -36,7 +41,7 @@ h1 {
     padding: 20px;
     font-size: 20px;
     margin: auto;
-}
+} */
 
 .list-card {
     text-align: center;
@@ -72,3 +77,25 @@ ul#season{
     height: 100%;
     cursor: pointer;
 } 	} 
+
+.list-card {
+    width: 300px;
+    color: #9C5F5F;
+    border: 2px solid #663939;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 10px auto 5px auto;
+    background-color: #fff;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.name{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+.list-desc {
+    padding-top: 15px;
+}

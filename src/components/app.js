@@ -1,17 +1,9 @@
 class App{
    static lists = []
     seasons = []
-    url = "http://localhost:3000"
+    
 
-
-    getLists(){
-        fetch(`${this.url}/lists`)
-        .then(resp => resp.json())
-        .then(data => console.log(data))
-    }
-}
-
-.then(lists => {
+lists => {
     const allSeason = {
         summer: [],
         winter: [],

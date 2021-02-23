@@ -5,6 +5,20 @@ class Season {
         this.listsAdapter = new ListsAdapter()
     }
 
+
+   addListenerToSeason(){
+       const seasonNames = document.querySelectorAll(".season-name")
+       seasonNames.forEach(season => {
+           season.addEventListener("click", () => {
+        //    const container = document.querySelector(".container")
+           
+           })
+       })
+
+   }
+
+
+
     renderSummerLists(){
         this.seasonsAdapter.getSeasons().then(seasons => {
             seasons[0].attributes.lists.forEach(list =>{
@@ -33,10 +47,6 @@ class Season {
             })
          })
       }
-  
-
-
-
 
 
     renderAllLists(){

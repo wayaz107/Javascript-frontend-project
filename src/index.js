@@ -2,5 +2,5 @@
 // seasonAdapter.getSeasons()
 
 
-const app = new App
+const app = new App()
 app.getLists()

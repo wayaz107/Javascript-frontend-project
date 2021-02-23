@@ -5,5 +5,15 @@ class List {
         this.id = id
         this.season_id = season_id
         this.season_name = season_name
+        this.listsAdapter = new ListsAdapter()
     }
+
+ 
+
+
+
+
+
+
+
 } 

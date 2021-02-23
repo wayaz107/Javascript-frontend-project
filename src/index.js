@@ -3,4 +3,4 @@
 
 
 const app = new App()
-app.getLists()
+app.start()

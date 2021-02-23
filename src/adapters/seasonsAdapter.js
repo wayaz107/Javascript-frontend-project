@@ -1,12 +1,12 @@
 class SeasonsAdapter{
-    constructor(baseURL) {
-        this.baseURL = baseURL
+    constructor() {
+        this.baseURL = "http://localhost:3000/seasons"
     }
 
     getSeasons() {
         return fetch(this.baseURL)
         .then(resp => resp.json())
-        .then(json => console.log(json.data));
+        .then(json => json.data)
     }
 
 }

@@ -10,12 +10,26 @@ class Season {
        const seasonNames = document.querySelectorAll(".season-name")
        seasonNames.forEach(season => {
            season.addEventListener("click", () => {
-        //    const container = document.querySelector(".container")
-           
+              const container = document.querySelector(".container")
+              container.style.display = "flex"
+            switch(season.textContent) {
+                 case "Summer":
+                     this.renderSummerLists()
+                     break
+                  case "Winter":
+                      this.renderWinterLists()
+                      break
+                  case "Fall":
+                      this.renderFallLists()
+                      break
+                   default:
+                     this.renderAllLists()
+                    
+              }
            })
        })
 
-   }
+    }
 
 
 

@@ -101,6 +101,19 @@ class Season {
         })
     }
 
+    addNewSeasonList(){
+        const seasonNameSelect = document.querySelector("#season-select").value
+        const listName = document.querySelector("#list-name").value
+        const listDescription = document.querySelector("#description").value
+        const data = {
+            name: listName,
+            description: listDescription,
+            season_id: seasonNameSelect
+        }
+
+        
+    }
+
 
 
 

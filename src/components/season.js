@@ -3,6 +3,7 @@ class Season {
         this.name = name
         this.seasonsAdapter = new SeasonsAdapter()
         this.listsAdapter = new ListsAdapter()
+        this.populateSeasonNameToForm()
     }
 
 
@@ -87,8 +88,20 @@ class Season {
   
     }
 
+    populateSeasonNameToForm(){
+        this.seasonsAdapter.getSeasons().then(seasons=>{
+            seasons.forEach(season => {
+                // console.log(season.id)
+                const selectBox = document.querySelector("#season-select")
+                const option = document.createElement("option")
+                option.textContent = season.attributes.name
+                option.value = season.id
+                selectBox.append(option)
+            })
+        })
+    }
 
-    
+
 
 
 

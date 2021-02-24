@@ -66,7 +66,7 @@ ul#season {
     padding: 20px;
 }
 
-/* Item card */
+/* list card */
 .list-card {
     width: 300px;
     color: #9C5F5F;
@@ -78,16 +78,6 @@ ul#season {
     font-family: 'Raleway', sans-serif;
 
 }
-
-/* div.list-image {
-    width: 250px;
-} */
-
-/* .list-image img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid #663939;
-} */
 
 .list-name{
     display: flex;

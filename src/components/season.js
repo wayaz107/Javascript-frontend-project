@@ -3,6 +3,7 @@ class Season {
         this.name = name
         this.seasonsAdapter = new SeasonsAdapter()
         this.listsAdapter = new ListsAdapter()
+        this.form = document.querySelector("#create-season-list-form")
         this.populateSeasonNameToForm()
     }
 
@@ -10,8 +11,7 @@ class Season {
    addListenerToSeason(){
        const seasonNames = document.querySelectorAll(".season-name")
        seasonNames.forEach(season => {
-           season.addEventListener("click", (e) => {
-               e.preventDefault();
+           season.addEventListener("click", () => {
               const container = document.querySelector(".container")
               container.style.display = "flex"
             switch(season.textContent) {
@@ -27,6 +27,10 @@ class Season {
                     this.clearPage()
                     this.renderFallLists()
                       break
+                  case "Add New Lists":
+                      this.clearPage()
+                      this.renderAddSeasonListForm()
+                      break
                    default:
                     this.clearPage()
                     this.renderAllLists()
@@ -37,12 +41,12 @@ class Season {
 
     }
 
-    clearPage(){
+    clearPage() {
         const clearLists = document.querySelectorAll(".list-card")
         Array.from(clearLists).forEach(list => {
             list.remove()
         })
-
+        this.form.style.display ="none"
     }
 
 
@@ -88,8 +92,15 @@ class Season {
   
     }
 
+    renderAddSeasonListForm(){
+        this.form.style.display = "block"
+        this.form.style.margin = "0 auto"
+        this.form.addEventListener("submit", (e) => this.addNewSeasonList(e))
+    }
+    
+
     populateSeasonNameToForm(){
-        this.seasonsAdapter.getSeasons().then(seasons=>{
+        this.seasonsAdapter.getSeasons().then(seasons => {
             seasons.forEach(season => {
                 // console.log(season.id)
                 const selectBox = document.querySelector("#season-select")
@@ -101,7 +112,8 @@ class Season {
         })
     }
 
-    addNewSeasonList(){
+    addNewSeasonList(e){
+        e.preventDefault()
         const seasonNameSelect = document.querySelector("#season-select").value
         const listName = document.querySelector("#list-name").value
         const listDescription = document.querySelector("#description").value
@@ -110,8 +122,13 @@ class Season {
             description: listDescription,
             season_id: seasonNameSelect
         }
+     this.listsAdapter.postLists(data).then(data => {
+         alert("List created!")
+         this.form.reset()
+         this.clearPage()
+         this.renderAllLists()
+        })
 
-        
     }
 
 

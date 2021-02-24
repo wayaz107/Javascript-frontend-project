@@ -13,13 +13,13 @@ class ListsAdapter{
         .then(json => json.data)
     }
 
-    postLists(){
-        return fetch(this.baseURL,{
+    postLists(data) {
+        return fetch(this.baseURL, {
             method: "POST",
-            headers:{
+            headers:{ 
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify()
+            body: JSON.stringify(data)
         })
         .then(resp => resp.json())
         .catch(err => alert(err))

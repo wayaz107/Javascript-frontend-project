@@ -14,8 +14,3 @@ To install follow these steps:
 
 -type open index.html to open index.html in the browser to begin navigating through this application.
 
-
-
-License
-
-This project is licensed under the MIT License - see the LICENSE file for details.

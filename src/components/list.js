@@ -26,7 +26,14 @@ class List {
      listDesc.className = "list-description"
      listDesc.textContent = this.description
 
-     listCard.append(listName, listDesc)
+    //delete button
+    const deleteBtn = document.createElement("button")
+    deleteBtn.className = "delete-list"
+    deleteBtn.textContent = "Delete"
+
+     //appending to parent
+
+     listCard.append(listName, listDesc, deleteBtn)
      
      container.append(listCard)
 

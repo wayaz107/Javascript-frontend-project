@@ -31,6 +31,8 @@ class List {
     deleteBtn.className = "delete-list"
     deleteBtn.textContent = "Delete"
 
+    deleteBtn.addEventListener("click", (e) => this.deleteList(e))
+
      //appending to parent
 
      listCard.append(listName, listDesc, deleteBtn)
@@ -38,6 +40,11 @@ class List {
      container.append(listCard)
 
  }
+
+    deleteList(e) {
+        const id = e.target.parentElement.dataset.id
+        this.listsAdapter.deleteLists(id).then(() => e.target.parentElement.remove())
+    }
 
 
 

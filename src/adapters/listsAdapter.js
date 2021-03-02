@@ -25,4 +25,16 @@ class ListsAdapter{
         .catch(err => alert(err))
     }
 
+   deleteLists(id){
+       return fetch(`${this.baseURL}/${id}`, {
+           method: "DELETE",
+           headers: {
+            "Content-Type": "application/json"
+           }
+       })
+       .then(resp => resp.json())
+   }
+
+
+
 }

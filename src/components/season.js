@@ -11,8 +11,7 @@ class Season {
    addListenerToSeason(){
        const seasonNames = document.querySelectorAll(".season-name")
        seasonNames.forEach(season => {
-           season.addEventListener("click", (e) => {
-               e.preventDefault()
+           season.addEventListener("click", () => {
               const container = document.querySelector(".container")
               container.style.display = "flex"
             switch(season.textContent) {

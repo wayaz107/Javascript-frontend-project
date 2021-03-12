@@ -46,10 +46,4 @@ class List {
         this.listsAdapter.deleteLists(id).then(() => e.target.parentElement.remove())
     }
 
-
-
-
-
-
-
 } 
